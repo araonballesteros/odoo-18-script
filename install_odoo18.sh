@@ -3,6 +3,20 @@
 # Odoo 18 Community Edition Installation Script
 # Author: Aaron Ballesteros, SofBiz Technologies – 2025
 
+# Cómo copiar este script a tu servidor
+# 1. Ubica el archivo `install_odoo18.sh` en tu equipo local. Por ejemplo en
+#    `C:\descargas`.
+# 2. Copia el archivo a tu VM o VPS con `scp` (puedes usar Git Bash o WSL):
+#      scp C:\descargas\install_odoo18.sh usuario@IP_DEL_SERVIDOR:/home/usuario/
+#    Reemplaza `usuario` e `IP_DEL_SERVIDOR` por los datos de tu instancia. El
+#    archivo se copiará a `/home/usuario/` aunque puedes elegir otra ruta.
+# 3. Conéctate vía SSH:
+#      ssh usuario@IP_DEL_SERVIDOR
+# 4. Ubica el directorio donde copiaste el script y dale permisos de ejecución:
+#      chmod +x install_odoo18.sh
+# 5. Ejecuta el instalador con privilegios de administrador:
+#      sudo ./install_odoo18.sh
+
 set -Ee
 trap 'exit_code=$?; echo "El script se detuvo en la línea ${BASH_LINENO[0]} ejecutando: ${BASH_COMMAND}. Código de salida: ${exit_code}" >&2' ERR
 
