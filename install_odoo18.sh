@@ -108,3 +108,12 @@ systemctl enable --now odoo18
 
 echo "Odoo 18 está instalado y ejecutándose en http://127.0.0.1:8069"
 
+cat <<'EOM'
+
+===== Instrucciones para acceder =====
+1. Abra su navegador y vaya a http://127.0.0.1:8069
+2. Use la contraseña maestra **admin** para crear la base de datos.
+3. Como ejemplo, introduzca el usuario *aaron* y la contraseña que desee.
+
+EOM
+
