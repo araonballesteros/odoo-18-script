@@ -47,6 +47,7 @@ Este repositorio contiene un script para instalar **Odoo 18 Community Edition** 
    sudo ./install_odoo18.sh
    ```
    El proceso instalará todas las dependencias, creará el usuario del sistema `odoo18` y dejará Odoo escuchando en [http://127.0.0.1:8069](http://127.0.0.1:8069).
+   - Si la descarga de **wkhtmltopdf** desde GitHub falla, el script intentará instalarlo automáticamente desde los repositorios de Ubuntu.
 
 - Si el script se detiene por un error, se mostrará en pantalla el comando y la línea que lo provocaron, para que puedas corregirlo antes de volver a ejecutarlo.
 ## Ejemplo para usuarios novatos

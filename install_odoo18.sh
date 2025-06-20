@@ -60,9 +60,13 @@ apt install -y git wget python3-pip python3-venv build-essential \
 # Instalar wkhtmltopdf
 echo "Instalando wkhtmltopdf..."
 WKHTML_DEB=wkhtmltox_0.12.6-1.jammy_amd64.deb
-wget -q https://github.com/wkhtmltopdf/wkhtmltopdf/releases/download/0.12.6/$WKHTML_DEB
-apt install -y ./$WKHTML_DEB
-rm -f $WKHTML_DEB
+if wget -q https://github.com/wkhtmltopdf/wkhtmltopdf/releases/download/0.12.6/$WKHTML_DEB; then
+    apt install -y ./$WKHTML_DEB
+    rm -f $WKHTML_DEB
+else
+    echo "Descarga directa fall\u00f3, instalando wkhtmltopdf desde apt..."
+    apt install -y wkhtmltopdf
+fi
 
 # Descargar código de Odoo
 echo "Clonando código de Odoo 18 Community Edition..."
