@@ -16,6 +16,7 @@ Este repositorio contiene un script para instalar **Odoo 18 Community Edition** 
    ```
    El proceso instalará todas las dependencias, creará el usuario del sistema `odoo18` y dejará Odoo escuchando en [http://127.0.0.1:8069](http://127.0.0.1:8069).
 
+- Si el script se detiene por un error, se mostrará en pantalla el comando y la línea que lo provocaron, para que puedas corregirlo antes de volver a ejecutarlo.
 ## Ejemplo para usuarios novatos
 
 1. Crea una máquina virtual en **VirtualBox** con Ubuntu 24.04.2 LTS (puedes asignar 2 GB de RAM y 2 núcleos).
