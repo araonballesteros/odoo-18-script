@@ -37,7 +37,7 @@ sudo -u postgres createuser -s odoo18 || true
 
 # Instalar dependencias de Python y herramientas
 echo "Instalando dependencias de Python y librerías necesarias..."
-apt install -y git python3-pip python3-venv build-essential \
+apt install -y git wget python3-pip python3-venv build-essential \
     libxslt-dev libzip-dev libldap2-dev libsasl2-dev python3-dev \
     libjpeg-dev libpq-dev libxml2-dev libffi-dev libssl-dev \
     pkg-config node-less libjpeg8-dev zlib1g-dev
