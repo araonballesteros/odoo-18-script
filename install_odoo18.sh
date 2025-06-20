@@ -3,7 +3,8 @@
 # Odoo 18 Community Edition Installation Script
 # Author: Aaron Ballesteros, SofBiz Technologies – 2025
 
-set -e
+set -Ee
+trap 'exit_code=$?; echo "El script se detuvo en la línea ${BASH_LINENO[0]} ejecutando: ${BASH_COMMAND}. Código de salida: ${exit_code}" >&2' ERR
 
 if [ $(id -u) -ne 0 ]; then
     echo "Este script debe ejecutarse como root o con sudo."
